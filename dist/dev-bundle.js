@@ -38,7 +38,7 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modalCall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modalCall */ \"./js/modules/modalCall.js\");\n //========заказать звонок============\n\n(0,_modules_modalCall__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n//# sourceURL=webpack://middleDiplom/./js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modalCall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modalCall */ \"./js/modules/modalCall.js\");\n/* harmony import */ var _modules_sliderProfits__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/sliderProfits */ \"./js/modules/sliderProfits.js\");\n/* harmony import */ var _modules_ourServices__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/ourServices */ \"./js/modules/ourServices.js\");\n\n\n //========заказать звонок============\n\n(0,_modules_modalCall__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(); //========sliderProfits==============\n\n(0,_modules_sliderProfits__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(); //========ourServices================\n\n(0,_modules_ourServices__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n\n//# sourceURL=webpack://middleDiplom/./js/index.js?");
 
 /***/ }),
 
@@ -49,7 +49,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar requestCall = function requestCall() {\n  var callBtn = document.querySelector('.button>.btn-warning');\n  var headerModal = document.querySelector('.header-modal');\n  var overlay = document.querySelector('.overlay');\n  var headerModalClose = document.querySelector('.header-modal__close');\n  callBtn.addEventListener('click', function (event) {\n    event.preventDefault();\n    overlay.style.display = 'block';\n    headerModal.style.display = 'block';\n  });\n  headerModalClose.addEventListener('click', function () {\n    overlay.style.display = 'none';\n    headerModal.style.display = 'none';\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (requestCall);\n\n//# sourceURL=webpack://middleDiplom/./js/modules/modalCall.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"overlay\": () => (/* binding */ overlay),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar overlay = document.querySelector('.overlay');\n\n\nvar requestCall = function requestCall() {\n  var callBtn = document.querySelector('.button>.btn-warning');\n  var headerModal = document.querySelector('.header-modal');\n  var headerModalClose = document.querySelector('.header-modal__close');\n  callBtn.addEventListener('click', function (event) {\n    event.preventDefault();\n    overlay.style.display = 'block';\n    headerModal.style.display = 'block';\n  });\n  headerModalClose.addEventListener('click', function () {\n    overlay.style.display = 'none';\n    headerModal.style.display = 'none';\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (requestCall);\n\n//# sourceURL=webpack://middleDiplom/./js/modules/modalCall.js?");
+
+/***/ }),
+
+/***/ "./js/modules/ourServices.js":
+/*!***********************************!*\
+  !*** ./js/modules/ourServices.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _modalCall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modalCall */ \"./js/modules/modalCall.js\");\n\n\nvar callOurServices = function callOurServices() {\n  var serviceBtns = document.querySelectorAll('.service-button>.btn-success');\n  console.log(serviceBtns);\n  var servicesModal = document.querySelector('.services-modal');\n  var servicesModalClose = document.querySelector('.services-modal__close');\n  serviceBtns.forEach(function (item) {\n    item.addEventListener('click', function () {\n      servicesModal.style.display = 'block';\n      _modalCall__WEBPACK_IMPORTED_MODULE_0__.overlay.style.display = 'block';\n    });\n  });\n  servicesModalClose.addEventListener('click', function () {\n    servicesModal.style.display = 'none';\n    _modalCall__WEBPACK_IMPORTED_MODULE_0__.overlay.style.display = 'none';\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (callOurServices);\n\n//# sourceURL=webpack://middleDiplom/./js/modules/ourServices.js?");
+
+/***/ }),
+
+/***/ "./js/modules/sliderProfits.js":
+/*!*************************************!*\
+  !*** ./js/modules/sliderProfits.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar showSliderProfits = function showSliderProfits() {\n  var benefitsArrow = document.querySelectorAll('.benefits__arrow');\n  console.log(benefitsArrow);\n  var benefitsWrap = document.querySelector('.benefits-wrap');\n  console.log(benefitsWrap);\n  var benefitsItems = document.querySelectorAll('.benefits__item');\n  console.log(benefitsItems);\n  var benefitsInner = document.querySelector('.benefits-inner'); // const benefitsWrapList = document.createElement('div');\n  // benefitsWrapList.classList.add('benefits-wrap__list');\n  // benefitsInner.append(benefitsWrapList);\n  // benefitsWrapList.append(benefitsWrap);\n\n  benefitsWrap.style.cssText = \"overflow: hidden; position: relative;\\n    transition: all ease 0.5s\";\n  benefitsItems.forEach(function (item) {\n    item.style.cssText = 'position: relative; margin: 0 33px';\n  });\n  var count = 0;\n  benefitsArrow.forEach(function (item) {\n    item.addEventListener('click', function (event) {\n      if (event.target.closest('.benefits__arrow--left') === item) {\n        console.log('click left');\n\n        if (document.documentElement.clientWidth > 576) {\n          benefitsItems.forEach(function (item) {\n            count -= 100;\n            item.style.left = count + 'px';\n          });\n        }\n      } else {\n        console.log('click right');\n      }\n    });\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (showSliderProfits);\n\n//# sourceURL=webpack://middleDiplom/./js/modules/sliderProfits.js?");
 
 /***/ }),
 
@@ -451,7 +473,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("f9af61ee9a1ef9f57827")
+/******/ 		__webpack_require__.h = () => ("f684e2927232a7f8c2e4")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
