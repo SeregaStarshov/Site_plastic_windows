@@ -35,9 +35,21 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /*!*********************!*\
   !*** ./js/index.js ***!
   \*********************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("\n\n//# sourceURL=webpack://middleDiplom/./js/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modalCall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modalCall */ \"./js/modules/modalCall.js\");\n //========заказать звонок============\n\n(0,_modules_modalCall__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n//# sourceURL=webpack://middleDiplom/./js/index.js?");
+
+/***/ }),
+
+/***/ "./js/modules/modalCall.js":
+/*!*********************************!*\
+  !*** ./js/modules/modalCall.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar requestCall = function requestCall() {\n  var callBtn = document.querySelector('.button>.btn-warning');\n  var headerModal = document.querySelector('.header-modal');\n  var overlay = document.querySelector('.overlay');\n  var headerModalClose = document.querySelector('.header-modal__close');\n  callBtn.addEventListener('click', function (event) {\n    event.preventDefault();\n    overlay.style.display = 'block';\n    headerModal.style.display = 'block';\n  });\n  headerModalClose.addEventListener('click', function () {\n    overlay.style.display = 'none';\n    headerModal.style.display = 'none';\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (requestCall);\n\n//# sourceURL=webpack://middleDiplom/./js/modules/modalCall.js?");
 
 /***/ }),
 
@@ -411,6 +423,18 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	__webpack_require__.i = [];
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/get javascript update chunk filename */
 /******/ 	(() => {
 /******/ 		// This function allow to reference all chunks
@@ -427,7 +451,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("cb385bd7e8363b23e6ad")
+/******/ 		__webpack_require__.h = () => ("f9af61ee9a1ef9f57827")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
@@ -490,6 +514,17 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 			script.onerror = onScriptComplete.bind(null, script.onerror);
 /******/ 			script.onload = onScriptComplete.bind(null, script.onload);
 /******/ 			needAttach && document.head.appendChild(script);
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	})();
 /******/ 	
