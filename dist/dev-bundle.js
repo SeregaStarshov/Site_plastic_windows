@@ -38,7 +38,7 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modalCall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modalCall */ \"./js/modules/modalCall.js\");\n //========заказать звонок============\n\n(0,_modules_modalCall__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n//# sourceURL=webpack://middleDiplom/./js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modalCall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modalCall */ \"./js/modules/modalCall.js\");\n/* harmony import */ var _modules_sliderProfits__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/sliderProfits */ \"./js/modules/sliderProfits.js\");\n\n //========заказать звонок============\n\n(0,_modules_modalCall__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(); //=========sliderProfits=============\n\n(0,_modules_sliderProfits__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n//# sourceURL=webpack://middleDiplom/./js/index.js?");
 
 /***/ }),
 
@@ -50,6 +50,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar requestCall = function requestCall() {\n  var callBtn = document.querySelector('.button>.btn-warning');\n  var headerModal = document.querySelector('.header-modal');\n  var overlay = document.querySelector('.overlay');\n  var headerModalClose = document.querySelector('.header-modal__close');\n  callBtn.addEventListener('click', function (event) {\n    event.preventDefault();\n    overlay.style.display = 'block';\n    headerModal.style.display = 'block';\n  });\n  headerModalClose.addEventListener('click', function () {\n    overlay.style.display = 'none';\n    headerModal.style.display = 'none';\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (requestCall);\n\n//# sourceURL=webpack://middleDiplom/./js/modules/modalCall.js?");
+
+/***/ }),
+
+/***/ "./js/modules/sliderProfits.js":
+/*!*************************************!*\
+  !*** ./js/modules/sliderProfits.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar showSliderProfits = function showSliderProfits() {\n  var benefitsArrow = document.querySelectorAll('.benefits__arrow');\n  var benefitsWrap = document.querySelector('.benefits-wrap');\n  var benefitsItems = document.querySelectorAll('.benefits__item');\n\n  function setStyleItems() {\n    benefitsWrap.style.cssText = \"overflow: hidden; position: relative;\";\n    benefitsItems.forEach(function (item, index) {\n      if (document.documentElement.clientWidth > 576) {\n        if (index === 1) {\n          item.style.cssText = 'position: relative; left: 0; margin: 0 28px; transition: all ease 1s';\n        } else if (index === 2) {\n          item.style.cssText = 'position: relative; left: 0; margin: 0 20px; transition: all ease 1s';\n        } else if (index === 4) {\n          item.style.cssText = 'position: relative; left: 0; margin: 0 23px; transition: all ease 1s';\n        } else {\n          item.style.cssText = 'position: relative; left: 0; margin: 0 33px; transition: all ease 1s';\n        }\n      } else if (document.documentElement.clientWidth < 576) {\n        item.style.cssText = 'position: relative; left: 0; margin: 0 13px; transition: all ease 1s';\n\n        if (index === 2 || index === 4) {\n          item.style.cssText = 'position: relative; left: 0; margin: 0 8px; transition: all ease 1s';\n        }\n      }\n    });\n  }\n\n  setStyleItems();\n  var count = 0;\n\n  var setStepSlide = function setStepSlide() {\n    benefitsArrow.forEach(function (item) {\n      if (document.documentElement.clientWidth > 576) {\n        benefitsWrap.style.maxWidth = '550px';\n        item.addEventListener('click', function (event) {\n          if (event.target.closest('.benefits__arrow--left') === item) {\n            count += 576;\n            benefitsItems.forEach(function (item) {\n              if (count > 0) {\n                count = -576;\n              }\n\n              item.style.left = count + 'px';\n            });\n          } else if (event.target.closest('.benefits__arrow--right') === item) {\n            count -= 576;\n            benefitsItems.forEach(function (item) {\n              if (count < -576) {\n                count = 0;\n              }\n\n              item.style.left = count + 'px';\n            });\n          }\n        });\n      }\n\n      if (document.documentElement.clientWidth < 576) {\n        benefitsWrap.style.width = '300px';\n        item.addEventListener('click', function (event) {\n          if (event.target.closest('.benefits__arrow--left') === item) {\n            count += 300;\n            benefitsItems.forEach(function (item) {\n              if (count > 0) {\n                count = -600;\n              }\n\n              item.style.left = count + 'px';\n            });\n          } else if (event.target.closest('.benefits__arrow--right') === item) {\n            count -= 576;\n            benefitsItems.forEach(function (item) {\n              if (count < -600) {\n                count = 0;\n              }\n\n              item.style.left = count + 'px';\n            });\n          }\n        });\n      }\n    });\n  };\n\n  setStepSlide();\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (showSliderProfits);\n\n//# sourceURL=webpack://middleDiplom/./js/modules/sliderProfits.js?");
 
 /***/ }),
 
@@ -451,7 +462,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("f9af61ee9a1ef9f57827")
+/******/ 		__webpack_require__.h = () => ("1bb3fd394e9f3e991e77")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
