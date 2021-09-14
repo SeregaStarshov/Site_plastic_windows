@@ -10,9 +10,12 @@ const requestCall = () => {
             headerModal.style.display = 'block';
     });
 
-    headerModalClose.addEventListener('click', () => {
-        overlay.style.display = 'none';
-        headerModal.style.display = 'none';
+    document.body.addEventListener('click', event => {
+        const target = event.target;
+        if (target === headerModalClose || target === overlay) {
+            overlay.style.display = 'none';
+            headerModal.style.display = 'none';
+        }
     });
 };
 
