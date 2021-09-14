@@ -13,9 +13,12 @@ const callOurServices = () => {
         });
     });
     
-    servicesModalClose.addEventListener('click', () => {
-        servicesModal.style.display = 'none';
-        overlay.style.display = 'none';
+
+    document.body.addEventListener('click', event => {
+        if (event.target === servicesModalClose || event.target === overlay) {
+            servicesModal.style.display = 'none';
+            overlay.style.display = 'none';
+        }
     });
 };
 
