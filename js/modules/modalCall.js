@@ -1,10 +1,5 @@
 const overlay = document.querySelector('.overlay');
-<<<<<<< HEAD
 export { overlay };
-
-=======
-export {overlay};
->>>>>>> documents
 
 const requestCall = () => {
     const callBtn = document.querySelector('.button>.btn-warning');
