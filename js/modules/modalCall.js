@@ -1,7 +1,10 @@
+const overlay = document.querySelector('.overlay');
+export { overlay };
+
+
 const requestCall = () => {
     const callBtn = document.querySelector('.button>.btn-warning');
     const headerModal = document.querySelector('.header-modal');
-    const overlay = document.querySelector('.overlay');
     const headerModalClose = document.querySelector('.header-modal__close');
 
     callBtn.addEventListener('click', event => {

@@ -38,7 +38,7 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modalCall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modalCall */ \"./js/modules/modalCall.js\");\n //========заказать звонок============\n\n(0,_modules_modalCall__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n//# sourceURL=webpack://middleDiplom/./js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modalCall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modalCall */ \"./js/modules/modalCall.js\");\n/* harmony import */ var _modules_ourServices__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/ourServices */ \"./js/modules/ourServices.js\");\n\n //========заказать звонок============\n\n(0,_modules_modalCall__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(); //========ourServices================\n\n(0,_modules_ourServices__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n//# sourceURL=webpack://middleDiplom/./js/index.js?");
 
 /***/ }),
 
@@ -49,7 +49,22 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+<<<<<<< HEAD
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar requestCall = function requestCall() {\n  var callBtn = document.querySelector('.button>.btn-warning');\n  var headerModal = document.querySelector('.header-modal');\n  var overlay = document.querySelector('.overlay');\n  var headerModalClose = document.querySelector('.header-modal__close');\n  callBtn.addEventListener('click', function (event) {\n    event.preventDefault();\n    overlay.style.display = 'block';\n    headerModal.style.display = 'block';\n  });\n  document.body.addEventListener('click', function (event) {\n    var target = event.target;\n\n    if (target === headerModalClose || target === overlay) {\n      overlay.style.display = 'none';\n      headerModal.style.display = 'none';\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (requestCall);\n\n//# sourceURL=webpack://middleDiplom/./js/modules/modalCall.js?");
+=======
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"overlay\": () => (/* binding */ overlay),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar overlay = document.querySelector('.overlay');\n\n\nvar requestCall = function requestCall() {\n  var callBtn = document.querySelector('.button>.btn-warning');\n  var headerModal = document.querySelector('.header-modal');\n  var headerModalClose = document.querySelector('.header-modal__close');\n  callBtn.addEventListener('click', function (event) {\n    event.preventDefault();\n    overlay.style.display = 'block';\n    headerModal.style.display = 'block';\n  });\n  headerModalClose.addEventListener('click', function () {\n    overlay.style.display = 'none';\n    headerModal.style.display = 'none';\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (requestCall);\n\n//# sourceURL=webpack://middleDiplom/./js/modules/modalCall.js?");
+
+/***/ }),
+
+/***/ "./js/modules/ourServices.js":
+/*!***********************************!*\
+  !*** ./js/modules/ourServices.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _modalCall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modalCall */ \"./js/modules/modalCall.js\");\n\n\nvar callOurServices = function callOurServices() {\n  var serviceBtns = document.querySelectorAll('.service-button>.btn-success');\n  console.log(serviceBtns);\n  var servicesModal = document.querySelector('.services-modal');\n  var servicesModalClose = document.querySelector('.services-modal__close');\n  serviceBtns.forEach(function (item) {\n    item.addEventListener('click', function () {\n      servicesModal.style.display = 'block';\n      _modalCall__WEBPACK_IMPORTED_MODULE_0__.overlay.style.display = 'block';\n    });\n  });\n  document.body.addEventListener('click', function (event) {\n    if (event.target === servicesModalClose || event.target === _modalCall__WEBPACK_IMPORTED_MODULE_0__.overlay) {\n      servicesModal.style.display = 'none';\n      _modalCall__WEBPACK_IMPORTED_MODULE_0__.overlay.style.display = 'none';\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (callOurServices);\n\n//# sourceURL=webpack://middleDiplom/./js/modules/ourServices.js?");
+>>>>>>> ourServices
 
 /***/ }),
 
@@ -451,7 +466,11 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
+<<<<<<< HEAD
 /******/ 		__webpack_require__.h = () => ("b8840063b0ccb93664b7")
+=======
+/******/ 		__webpack_require__.h = () => ("9d64ab3030f8083bb60f")
+>>>>>>> ourServices
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
