@@ -38,7 +38,11 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+<<<<<<< HEAD
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modalCall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modalCall */ \"./js/modules/modalCall.js\");\n/* harmony import */ var _modules_ourServices__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/ourServices */ \"./js/modules/ourServices.js\");\n\n //========заказать звонок============\n\n(0,_modules_modalCall__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(); //========ourServices================\n\n(0,_modules_ourServices__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n//# sourceURL=webpack://middleDiplom/./js/index.js?");
+=======
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modalCall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modalCall */ \"./js/modules/modalCall.js\");\n/* harmony import */ var _modules_sliderProfits__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/sliderProfits */ \"./js/modules/sliderProfits.js\");\n/* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/timer */ \"./js/modules/timer.js\");\n\n\n //========заказать звонок============\n\n(0,_modules_modalCall__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(); //=========sliderProfits=============\n\n(0,_modules_sliderProfits__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(); //=========timer=====================\n\n(0,_modules_timer__WEBPACK_IMPORTED_MODULE_2__[\"default\"])('21 September 2021');\n\n//# sourceURL=webpack://middleDiplom/./js/index.js?");
+>>>>>>> timer
 
 /***/ }),
 
@@ -49,6 +53,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+<<<<<<< HEAD
 <<<<<<< HEAD
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar requestCall = function requestCall() {\n  var callBtn = document.querySelector('.button>.btn-warning');\n  var headerModal = document.querySelector('.header-modal');\n  var overlay = document.querySelector('.overlay');\n  var headerModalClose = document.querySelector('.header-modal__close');\n  callBtn.addEventListener('click', function (event) {\n    event.preventDefault();\n    overlay.style.display = 'block';\n    headerModal.style.display = 'block';\n  });\n  document.body.addEventListener('click', function (event) {\n    var target = event.target;\n\n    if (target === headerModalClose || target === overlay) {\n      overlay.style.display = 'none';\n      headerModal.style.display = 'none';\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (requestCall);\n\n//# sourceURL=webpack://middleDiplom/./js/modules/modalCall.js?");
 =======
@@ -65,6 +70,31 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _modalCall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modalCall */ \"./js/modules/modalCall.js\");\n\n\nvar callOurServices = function callOurServices() {\n  var serviceBtns = document.querySelectorAll('.service-button>.btn-success');\n  console.log(serviceBtns);\n  var servicesModal = document.querySelector('.services-modal');\n  var servicesModalClose = document.querySelector('.services-modal__close');\n  serviceBtns.forEach(function (item) {\n    item.addEventListener('click', function () {\n      servicesModal.style.display = 'block';\n      _modalCall__WEBPACK_IMPORTED_MODULE_0__.overlay.style.display = 'block';\n    });\n  });\n  document.body.addEventListener('click', function (event) {\n    if (event.target === servicesModalClose || event.target === _modalCall__WEBPACK_IMPORTED_MODULE_0__.overlay) {\n      servicesModal.style.display = 'none';\n      _modalCall__WEBPACK_IMPORTED_MODULE_0__.overlay.style.display = 'none';\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (callOurServices);\n\n//# sourceURL=webpack://middleDiplom/./js/modules/ourServices.js?");
 >>>>>>> ourServices
+=======
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar requestCall = function requestCall() {\n  var callBtn = document.querySelector('.button>.btn-warning');\n  var headerModal = document.querySelector('.header-modal');\n  var overlay = document.querySelector('.overlay');\n  var headerModalClose = document.querySelector('.header-modal__close');\n  callBtn.addEventListener('click', function (event) {\n    event.preventDefault();\n    overlay.style.display = 'block';\n    headerModal.style.display = 'block';\n  });\n  document.body.addEventListener('click', function (event) {\n    var target = event.target;\n\n    if (target === headerModalClose || target === overlay) {\n      overlay.style.display = 'none';\n      headerModal.style.display = 'none';\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (requestCall);\n\n//# sourceURL=webpack://middleDiplom/./js/modules/modalCall.js?");
+
+/***/ }),
+
+/***/ "./js/modules/sliderProfits.js":
+/*!*************************************!*\
+  !*** ./js/modules/sliderProfits.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar showSliderProfits = function showSliderProfits() {\n  var benefitsArrow = document.querySelectorAll('.benefits__arrow');\n  var benefitsWrap = document.querySelector('.benefits-wrap');\n  var benefitsItems = document.querySelectorAll('.benefits__item');\n  var count = 0;\n  var width;\n  benefitsWrap.style.overflow = 'hidden';\n\n  if (document.documentElement.clientWidth > 576) {\n    benefitsWrap.style.maxWidth = '550px';\n  } else if (document.documentElement.clientWidth < 576) {\n    benefitsWrap.style.maxWidth = '330px';\n  }\n\n  var setStepSlide = function setStepSlide() {\n    benefitsItems.forEach(function (item) {\n      item.style.minWidth = '189px';\n      item.style.height = 'auto';\n      width = item.style.minWidth;\n      console.log(width);\n      benefitsWrap.style.width = width * benefitsItems.length + 'px';\n    });\n  };\n\n  console.log(width);\n  window.addEventListener('resize', setStepSlide);\n  setStepSlide();\n\n  var stepNext = function stepNext() {\n    for (var i = 0; i < benefitsArrow.length; i++) {\n      benefitsArrow[0].addEventListener('click', function (event) {\n        if (document.documentElement.clientWidth > 576) {\n          count += 3;\n          moveSlide();\n        }\n      });\n    }\n  };\n\n  stepNext();\n\n  function moveSlide() {\n    benefitsWrap.style.transform = 'translate(- ' + count * width + 'px)';\n  }\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (showSliderProfits);\n\n//# sourceURL=webpack://middleDiplom/./js/modules/sliderProfits.js?");
+
+/***/ }),
+
+/***/ "./js/modules/timer.js":
+/*!*****************************!*\
+  !*** ./js/modules/timer.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar timer = function timer(deadline) {\n  var countItems = document.querySelectorAll('.count');\n  var timerDays = [],\n      timerHours = [],\n      timerMinutes = [],\n      timerSeconds = [];\n  countItems.forEach(function (item) {\n    if (item.classList.contains('count_1')) {\n      timerDays.push(item);\n    } else if (item.classList.contains('count_2')) {\n      timerHours.push(item);\n    } else if (item.classList.contains('count_3')) {\n      timerMinutes.push(item);\n    } else if (item.classList.contains('count_4')) {\n      timerSeconds.push(item);\n    }\n  });\n\n  function getTimeRemaining() {\n    var dateStop = new Date(deadline).getTime();\n    var dateNow = new Date().getTime();\n    var timeRemaining = (dateStop - dateNow) / 1000;\n    var seconds = Math.floor(timeRemaining % 60);\n    var minutes = Math.floor(timeRemaining / 60 % 60);\n    var hours = Math.floor(timeRemaining / 60 / 60) % 24;\n    var days = Math.floor(timeRemaining / 60 / 60 / 24);\n    return {\n      timeRemaining: timeRemaining,\n      days: days,\n      hours: hours,\n      minutes: minutes,\n      seconds: seconds\n    };\n  }\n\n  var timerId = setInterval(function () {\n    var timer = getTimeRemaining();\n\n    if (timer.timeRemaining <= 0) {\n      clearInterval(timerId);\n      timer.days = 0;\n      timer.hours = 0;\n      timer.minutes = 0;\n      timer.seconds = 0;\n    }\n\n    timerDays.forEach(function (item) {\n      var timerDay = item.querySelector('.count_1>span');\n\n      if (timer.days < 10) {\n        timerDay.textContent = \"0\".concat(timer.days);\n      } else {\n        timerDay.textContent = timer.days;\n      }\n    });\n    timerHours.forEach(function (item) {\n      var timerHour = item.querySelector('.count_2>span');\n\n      if (timer.hours < 10) {\n        timerHour.textContent = \"0\".concat(timer.hours);\n      } else {\n        timerHour.textContent = timer.hours;\n      }\n    });\n    timerMinutes.forEach(function (item) {\n      var timerMinute = item.querySelector('.count_3>span');\n\n      if (timer.minutes < 10) {\n        timerMinute.textContent = \"0\".concat(timer.minutes);\n      } else {\n        timerMinute.textContent = timer.minutes;\n      }\n    });\n    timerSeconds.forEach(function (item) {\n      var timerSecond = item.querySelector('.count_4>span');\n\n      if (timer.seconds < 10) {\n        timerSecond.textContent = \"0\".concat(timer.seconds);\n      } else {\n        timerSecond.textContent = timer.seconds;\n      }\n    });\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (timer);\n\n//# sourceURL=webpack://middleDiplom/./js/modules/timer.js?");
+>>>>>>> timer
 
 /***/ }),
 
@@ -467,10 +497,14 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 /******/ 		__webpack_require__.h = () => ("b8840063b0ccb93664b7")
 =======
 /******/ 		__webpack_require__.h = () => ("9d64ab3030f8083bb60f")
 >>>>>>> ourServices
+=======
+/******/ 		__webpack_require__.h = () => ("b547def2ff42b535817c")
+>>>>>>> timer
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
