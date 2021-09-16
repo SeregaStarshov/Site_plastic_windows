@@ -1,17 +1,7 @@
 const submitForm = () => {
     const form = document.querySelectorAll('form');
-    //console.log(form);
-    // const callbackForm = document.querySelectorAll('form[name="callback-form"]');
-    // console.log(callbackForm);
-    // const applicationForm = document.querySelector('form[name="application-form"]');
-    // console.log(applicationForm);
-    const formHorizontal = document.querySelectorAll('.form-horizontal');
-    // console.log(formHorizontal);
     const inputsName = document.querySelectorAll('input[name="fio"]');
-    console.log(inputsName);
     const inputsPhone = document.querySelectorAll('input[name="phone"]');
-    console.log(inputsPhone);
-
 
 
     inputsName.forEach(item => {
