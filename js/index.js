@@ -4,6 +4,7 @@ import callOurServices from "./modules/ourServices";
 import showSliderProfits from "./modules/sliderProfits";
 import timer from "./modules/timer";
 import scroll from "./modules/scroll";
+import submitForm from "./modules/form";
 
 //========заказать звонок============
 requestCall();
@@ -22,3 +23,9 @@ documents();
 
 //=========scroll====================
 scroll();
+<<<<<<< HEAD
+=======
+
+//===========form===================
+submitForm();
+>>>>>>> form
