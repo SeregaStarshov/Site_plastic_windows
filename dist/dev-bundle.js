@@ -38,7 +38,7 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_documents__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/documents */ \"./js/modules/documents.js\");\n/* harmony import */ var _modules_modalCall__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/modalCall */ \"./js/modules/modalCall.js\");\n/* harmony import */ var _modules_sliderProfits__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/sliderProfits */ \"./js/modules/sliderProfits.js\");\n/* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/timer */ \"./js/modules/timer.js\");\n/* harmony import */ var _modules_scroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/scroll */ \"./js/modules/scroll.js\");\n\n\n\n\n //========заказать звонок============\n\n(0,_modules_modalCall__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(); //=========sliderProfits=============\n\n(0,_modules_sliderProfits__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(); //=========timer=====================\n\n(0,_modules_timer__WEBPACK_IMPORTED_MODULE_3__[\"default\"])('21 September 2021'); //========documents==================\n\n(0,_modules_documents__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(); //=========scroll====================\n\n(0,_modules_scroll__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n\n//# sourceURL=webpack://middleDiplom/./js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_documents__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/documents */ \"./js/modules/documents.js\");\n/* harmony import */ var _modules_modalCall__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/modalCall */ \"./js/modules/modalCall.js\");\n/* harmony import */ var _modules_sliderProfits__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/sliderProfits */ \"./js/modules/sliderProfits.js\");\n/* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/timer */ \"./js/modules/timer.js\");\n/* harmony import */ var _modules_scroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/scroll */ \"./js/modules/scroll.js\");\n/* harmony import */ var _modules_form__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/form */ \"./js/modules/form.js\");\n\n\n\n\n\n //========заказать звонок============\n\n(0,_modules_modalCall__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(); //=========sliderProfits=============\n\n(0,_modules_sliderProfits__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(); //=========timer=====================\n\n(0,_modules_timer__WEBPACK_IMPORTED_MODULE_3__[\"default\"])('21 September 2021'); //========documents==================\n\n(0,_modules_documents__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(); //=========scroll====================\n\n(0,_modules_scroll__WEBPACK_IMPORTED_MODULE_4__[\"default\"])(); //===========form===================\n\n(0,_modules_form__WEBPACK_IMPORTED_MODULE_5__[\"default\"])();\n\n//# sourceURL=webpack://middleDiplom/./js/index.js?");
 
 /***/ }),
 
@@ -50,6 +50,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"smoothScroll\": () => (/* binding */ smoothScroll),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _modalCall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modalCall */ \"./js/modules/modalCall.js\");\n\nvar smoothScroll = document.querySelector('.smooth-scroll');\n\n\nvar documents = function documents() {\n  var documents = document.getElementById('documents');\n  var documentOverlay = document.querySelectorAll('.document-overlay');\n  var divModal = document.createElement('div');\n  var img = document.createElement('img');\n  divModal.classList.add('documents-modal');\n  divModal.style.cssText = 'max-width: 849px; height: 100%; position: fixed; top: 0; left: 33%; display: none';\n  smoothScroll.after(divModal);\n  img.setAttribute('src', './images/documents/original/document4.jpg');\n  img.style.cssText = 'height: 100%;';\n  divModal.append(img);\n  documents.addEventListener('click', function (event) {\n    var target = event.target;\n    event.preventDefault();\n\n    if (target.closest('.sertificate-document')) {\n      _modalCall__WEBPACK_IMPORTED_MODULE_0__.overlay.style.display = 'block';\n      divModal.style.display = 'block';\n    }\n  });\n  documentOverlay.forEach(function (item) {\n    item.addEventListener('mouseover', function () {\n      if (item.closest('.sertificate-document')) {\n        item.style.cssText = 'opacity: 1; width: 200px; left: 97px;';\n      }\n    });\n    item.addEventListener('mouseout', function () {\n      item.style.opacity = '0';\n    });\n  });\n  document.body.addEventListener('click', function (event) {\n    if (event.target.closest('.documents-modal') || event.target === _modalCall__WEBPACK_IMPORTED_MODULE_0__.overlay) {\n      _modalCall__WEBPACK_IMPORTED_MODULE_0__.overlay.style.display = 'none';\n      divModal.style.display = 'none';\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (documents);\n\n//# sourceURL=webpack://middleDiplom/./js/modules/documents.js?");
+
+/***/ }),
+
+/***/ "./js/modules/form.js":
+/*!****************************!*\
+  !*** ./js/modules/form.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar submitForm = function submitForm() {};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (submitForm);\n\n//# sourceURL=webpack://middleDiplom/./js/modules/form.js?");
 
 /***/ }),
 
@@ -495,7 +506,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("77c7a468d324714fbdd9")
+/******/ 		__webpack_require__.h = () => ("c115b881433d5bb73713")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

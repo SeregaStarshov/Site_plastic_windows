@@ -3,6 +3,7 @@ import requestCall from "./modules/modalCall";
 import showSliderProfits from "./modules/sliderProfits";
 import timer from "./modules/timer";
 import scroll from "./modules/scroll";
+import submitForm from "./modules/form";
 
 
 //========заказать звонок============
@@ -19,3 +20,6 @@ documents();
 
 //=========scroll====================
 scroll();
+
+//===========form===================
+submitForm();
