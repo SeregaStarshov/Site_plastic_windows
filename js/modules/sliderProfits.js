@@ -17,11 +17,10 @@ const showSliderProfits = () => {
             item.style.minWidth = '189px';
             item.style.height = 'auto';
             width = item.style.minWidth;
-            console.log(width);
             benefitsWrap.style.width = width * benefitsItems.length + 'px';
         });
     };
-    console.log(width)
+
     window.addEventListener('resize', setStepSlide);
     setStepSlide();
 
