@@ -78,7 +78,6 @@ const submitForm = () => {
             if (event.target === item) {
                 const itemCollection = item.elements;
                 for (let i = 0; i < itemCollection.length - 1; i++) {
-                    console.log(itemCollection);
                         itemCollection[i].value = '';
                 }
             }
