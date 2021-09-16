@@ -1,5 +1,10 @@
+const form = document.querySelectorAll('form');
+const calcTotal = document.getElementById('calc-total');
+const calcType = document.getElementById('calc-type');
+const calcTypeMaterial = document.getElementById('calc-type-material');
+const calcInput = document.getElementById('calc-input');
+
 const submitForm = () => {
-    const form = document.querySelectorAll('form');
     const inputsName = document.querySelectorAll('input[name="fio"]');
     const inputsPhone = document.querySelectorAll('input[name="phone"]');
 
@@ -49,6 +54,9 @@ const submitForm = () => {
         item.addEventListener('submit', event => {
             event.preventDefault();
             const formData = new FormData(item);
+            if (calcTotal) {
+                formData.append('calc-total', calcTotal.value);
+            }
             const body = {};
             formData.forEach((val, key) => {
                 body[key] = val;
@@ -67,6 +75,19 @@ const submitForm = () => {
                     .catch(error => {
                         console.error(error);
                     });
+            if (event.target === item) {
+                const itemCollection = item.elements;
+                for (let i = 0; i < itemCollection.length - 1; i++) {
+                    console.log(itemCollection);
+                        itemCollection[i].value = '';
+                }
+            }
+            if (calcTotal) {
+                calcType.value = '--';
+                calcTypeMaterial.value = '--';
+                calcInput.value = '';
+                calcTotal.value = '';
+            }
         });
     });
 

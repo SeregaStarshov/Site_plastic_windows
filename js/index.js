@@ -5,6 +5,7 @@ import showSliderProfits from "./modules/sliderProfits";
 import timer from "./modules/timer";
 import scroll from "./modules/scroll";
 import submitForm from "./modules/form";
+import calc from "./modules/calc";
 
 //========заказать звонок============
 requestCall();
@@ -26,3 +27,6 @@ scroll();
 
 //===========form===================
 submitForm();
+
+//==============calc===============
+calc();
