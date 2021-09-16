@@ -1,8 +1,9 @@
 import { overlay } from "./modalCall";
+const smoothScroll = document.querySelector('.smooth-scroll');
+export { smoothScroll };
 
 const documents = () => {
     const documents = document.getElementById('documents');
-    const smoothScroll = document.querySelector('.smooth-scroll');
     const documentOverlay = document.querySelectorAll('.document-overlay');
     const divModal = document.createElement('div');
     const img = document.createElement('img');
