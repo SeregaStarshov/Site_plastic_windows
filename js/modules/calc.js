@@ -11,15 +11,12 @@ const calc = () => {
         return !isNaN(parseFloat(n)) && isFinite(n);
     }
     
-
+    
     if (calc) {
         const calcTotalValue = () => {
-            let total;
             if (isNumber(calcType.value) && isNumber(calcTypeMaterial.value)) {
-                total = Math.ceil(calcType.value * calcTypeMaterial.value);
                 calc.addEventListener('input', () => {
-    
-                    calcTotal.value = total * calcInput.value;
+                    calcTotal.value = Math.ceil(calcType.value * calcInput.value * calcTypeMaterial.value);
                 });
             }
         };
@@ -27,7 +24,6 @@ const calc = () => {
 
         calc.addEventListener('change', calcTotalValue);
     }
-    
 };
 
 export default calc;
