@@ -8,7 +8,6 @@ const submitForm = () => {
     const inputsName = document.querySelectorAll('input[name="fio"]');
     const inputsPhone = document.querySelectorAll('input[name="phone"]');
     const btnsSubmit = document.querySelectorAll('button[type="submit"]');
-    console.log(btnsSubmit);
 
     inputsName.forEach(item => {
         item.setAttribute('required', true);
