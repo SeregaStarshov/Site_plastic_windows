@@ -1,11 +1,11 @@
 const showSliderProfits = () => {
-    const benefitsArrow = document.querySelectorAll('.benefits__arrow');
+    const benefitsArrows = document.querySelector('.benefits-arrows');
     const benefitsWrap = document.querySelector('.benefits-wrap');
     const benefitsItems = document.querySelectorAll('.benefits__item');
     let count = 0;
 
 
-    function setStyleItems() {
+    const setStyleItems = () => {
         benefitsWrap.style.cssText = `overflow: hidden; position: relative;`;
         benefitsItems.forEach((item) => {
             if (document.documentElement.clientWidth >= 576) {
@@ -13,62 +13,91 @@ const showSliderProfits = () => {
                 benefitsWrap.style.maxWidth = '550px';
             } else if (document.documentElement.clientWidth < 576) {
                 item.style.cssText = 'position: relative; left: 0; min-width: 150px; transition: all ease 1s';
-                benefitsWrap.style.width = '300px';
+                benefitsWrap.style.maxWidth = '300px';
             }
             
         });
-    }
+    };
     setStyleItems();
 
-    const setStepSlide = () => {
-        benefitsArrow.forEach(item => {
-            if (document.documentElement.clientWidth > 576) {
-                item.addEventListener('click', event => {
-                    if (event.target.closest('.benefits__arrow--left') === item) {
-                        count += 576;
-                        benefitsItems.forEach(item => {
-                            if (count > 0) {
-                                count = -576;
-                            }
-                            item.style.left = count + 'px';
-                        });
-                    } else if (event.target.closest('.benefits__arrow--right') === item) {
-                        count -= 576;
-                        benefitsItems.forEach(item => {
-                            if (count < -576) {
-                                count = 0;
-                            }
-                            item.style.left = count + 'px';
-                        });
-                    }
-                });
+    const setWidthSlide = () => {
+        let width;
+        benefitsItems.forEach(item => {
+            width = item.offsetWidth;
+        });
+        return width;
+    };
+    let widthElement = setWidthSlide();
+
+    const moveSlideLeftDesktop = () => {
+        count += widthElement * 3;
+        benefitsItems.forEach(item => {
+            if (count > 0) {
+                count = -(widthElement * 3);
             }
 
-            if (document.documentElement.clientWidth < 576) {
-                item.addEventListener('click', event => {
-                    if (event.target.closest('.benefits__arrow--left') === item) {
-                        count += 300;
-                        benefitsItems.forEach(item => {
-                            if (count > 0) {
-                                count = -600;
-                            }
-                            item.style.left = count + 'px';
-                        });
-                    } else if (event.target.closest('.benefits__arrow--right') === item) {
-                        count -= 300;
-                        benefitsItems.forEach(item => {
-                            if (count < -600) {
-                                count = 0;
-                            }
-                            item.style.left = count + 'px';
-                        });
-                    }
-                });
-            }
+            item.style.left = count + 'px';
         });
     };
 
-    setStepSlide();
+    const moveSlideRightDesktop = () => {
+        count -= widthElement * 3;
+        benefitsItems.forEach(item => {
+            if (count < -widthElement * 3) {
+                count = 0;
+            }
+
+            item.style.left = count + 'px';
+        });
+    };
+
+    const moveSlideLeftMobile = () => {
+        count += widthElement * 2;
+        benefitsItems.forEach(item => {
+            if (count > 0) {
+                count = -widthElement * 4;
+            }
+
+            item.style.left = count + 'px';
+        });
+    };
+
+    const moveSlideRightMobile = () => {
+        count -= widthElement * 2;
+        console.log(widthElement)
+        benefitsItems.forEach(item => {
+            if (count < -widthElement * 4) {
+                count = 0;
+            }
+
+            item.style.left = count + 'px';
+        });
+    };
+
+    benefitsArrows.addEventListener('click', event => {
+        const target = event.target;
+        if (target.closest('.benefits__arrow--left')) {
+            if (document.documentElement.offsetWidth >= 576) {
+                moveSlideLeftDesktop();
+            } else if (document.documentElement.offsetWidth < 576) {
+                moveSlideLeftMobile();
+            }
+        }
+
+        if (target.closest('.benefits__arrow--right')) {
+            if (document.documentElement.offsetWidth >= 576) {
+                moveSlideRightDesktop();
+            } else if (document.documentElement.offsetWidth < 576) {
+                moveSlideRightMobile();
+            }
+        }
+    });
+
+    window.addEventListener('resize', () => {
+        setStyleItems();
+        setWidthSlide();
+    });
+
 };
 
 export default showSliderProfits;
