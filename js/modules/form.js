@@ -7,7 +7,8 @@ const calcInput = document.getElementById('calc-input');
 const submitForm = () => {
     const inputsName = document.querySelectorAll('input[name="fio"]');
     const inputsPhone = document.querySelectorAll('input[name="phone"]');
-
+    const btnsSubmit = document.querySelectorAll('button[type="submit"]');
+    console.log(btnsSubmit);
 
     inputsName.forEach(item => {
         item.setAttribute('required', true);
@@ -20,6 +21,15 @@ const submitForm = () => {
                 }
 
                 item.value = item.value.replace(/[^а-яa-z]/ig, '');
+                if (item.value.length < 2) {
+                    btnsSubmit.forEach(item => {
+                        item.setAttribute('disabled', true);
+                    });
+                } else {
+                    btnsSubmit.forEach(item => {
+                        item.removeAttribute('disabled');
+                    });
+                }
             }
         });
     });
@@ -35,15 +45,15 @@ const submitForm = () => {
                 }
 
                 item.value = item.value.replace(/[^0-9\+]/ig, '');
-            }
-        });
-    });
-
-    inputsPhone.forEach(item => {
-        item.addEventListener('blur', event => {
-            if (item === event.target) {
                 if (item.value.length < 4 || item.value.length > 16) {
-                    item.value = '';
+                    btnsSubmit.forEach(item => {
+                        item.setAttribute('disabled', true);
+                    });
+                } else {
+                    btnsSubmit.forEach(item => {
+                        item.removeAttribute('disabled');
+                    });
+                    
                 }
             }
         });
