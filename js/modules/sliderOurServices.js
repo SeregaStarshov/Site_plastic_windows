@@ -4,6 +4,7 @@ const sliderOurServices = () => {
     const servicesArrow = document.querySelector('.services-arrows');
     const serviceButton = services.querySelectorAll('.service-button');
     const serviceBlock = services.querySelectorAll('.service-block');
+    let count = 0;
     
 
     const style = () => {
@@ -33,8 +34,7 @@ const sliderOurServices = () => {
         return width;
     };
     
-    const widthElem = setWidthServiceItem();//460
-    let count = 0;
+    const widthElem = setWidthServiceItem();
 
     const moveRightDesktop = () => {
         count -= (widthElem + 60) * 2;
@@ -95,17 +95,7 @@ const sliderOurServices = () => {
     });
 
     window.addEventListener('resize', () => {
-        if (document.documentElement.offsetWidth >= 576) {
-            serviceRow.style.cssText = 'display: flex; overflow: hidden; max-width: 1040px; margin: auto';
-            servicesArrow.style.cssText = 'left: 47.5%; bottom: 10px; position: absolute';
-            moveRightDesktop();
-            moveLeftDesktop();
-        } else if (document.documentElement.offsetWidth < 576) {
-            serviceRow.style.cssText = 'display: flex; overflow: hidden; max-width: 300px; margin: auto';
-            servicesArrow.style.cssText = 'left: 36.5%; bottom: 10px; position: absolute';
-            moveRightMobile();
-            moveLeftMobile();
-        }
+        style();
     });
 };
 

@@ -44,7 +44,8 @@ const submitForm = () => {
                 }
 
                 item.value = item.value.replace(/[^0-9\+]/ig, '');
-                if (item.value.length < 4 || item.value.length > 16) {
+
+                if (item.value.length < 10 || item.value.length > 16) {
                     btnsSubmit.forEach(item => {
                         item.setAttribute('disabled', true);
                     });
