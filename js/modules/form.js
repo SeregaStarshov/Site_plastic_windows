@@ -30,15 +30,15 @@ const submitForm = () => {
                 }
 
                 item.value = item.value.replace(/[^0-9\+]/ig, '');
-            }
-        });
-    });
-
-    inputsPhone.forEach(item => {
-        item.addEventListener('blur', event => {
-            if (item === event.target) {
                 if (item.value.length < 4 || item.value.length > 16) {
-                    item.value = '';
+                    btnsSubmit.forEach(item => {
+                        item.setAttribute('disabled', true);
+                    });
+                } else {
+                    btnsSubmit.forEach(item => {
+                        item.removeAttribute('disabled');
+                    });
+                    
                 }
             }
         });
