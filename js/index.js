@@ -6,6 +6,7 @@ import timer from "./modules/timer";
 import scroll from "./modules/scroll";
 import submitForm from "./modules/form";
 import calc from "./modules/calc";
+import sliderOurServices from "./modules/sliderOurServices";
 
 //========заказать звонок============
 requestCall();
@@ -30,3 +31,6 @@ submitForm();
 
 //==============calc===============
 calc();
+
+//=========sliderOurServices========
+sliderOurServices();
