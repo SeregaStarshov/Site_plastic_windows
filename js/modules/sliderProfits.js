@@ -3,7 +3,7 @@ const showSliderProfits = () => {
     const benefitsWrap = document.querySelector('.benefits-wrap');
     const benefitsItems = document.querySelectorAll('.benefits__item');
     let count = 0;
-
+    let widthElement;
 
     const setStyleItems = () => {
         benefitsWrap.style.cssText = `overflow: hidden; position: relative;`;
@@ -27,7 +27,11 @@ const showSliderProfits = () => {
         });
         return width;
     };
-    let widthElement = setWidthSlide();
+
+    const timerId = setInterval(() => {
+        widthElement = setWidthSlide();
+    }, 1000);
+
 
     const moveSlideLeftDesktop = () => {
         count += widthElement * 3;

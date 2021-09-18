@@ -5,6 +5,7 @@ const sliderOurServices = () => {
     const serviceButton = services.querySelectorAll('.service-button');
     const serviceBlock = services.querySelectorAll('.service-block');
     let count = 0;
+    let widthElem;
     
 
     const style = () => {
@@ -34,7 +35,10 @@ const sliderOurServices = () => {
         return width;
     };
     
-    const widthElem = setWidthServiceItem();
+    const timerId = setInterval(() => {
+        widthElem = setWidthServiceItem();
+    }, 1000);
+    
 
     const moveRightDesktop = () => {
         count -= (widthElem + 60) * 2;
