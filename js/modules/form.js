@@ -3,6 +3,9 @@ const calcTotal = document.getElementById('calc-total');
 const calcType = document.getElementById('calc-type');
 const calcTypeMaterial = document.getElementById('calc-type-material');
 const calcInput = document.getElementById('calc-input');
+import {headerModal} from "./modalCall";
+import { overlay } from "./modalCall";
+import {servicesModal} from "./ourServices";
 
 const submitForm = () => {
     const inputsName = document.querySelectorAll('input[name="fio"]');
@@ -19,7 +22,6 @@ const submitForm = () => {
                     return;
                 }
 
-                item.value = item.value.replace(/[^а-яa-z]/ig, '');
                 if (item.value.length < 2) {
                     btnsSubmit.forEach(item => {
                         item.setAttribute('disabled', true);
@@ -28,6 +30,7 @@ const submitForm = () => {
                     btnsSubmit.forEach(item => {
                         item.removeAttribute('disabled');
                     });
+                    item.value = item.value.replace(/[^а-яa-z]/ig, '');
                 }
             }
         });
@@ -45,7 +48,7 @@ const submitForm = () => {
 
                 item.value = item.value.replace(/[^0-9\+]/ig, '');
 
-                if (item.value.length < 10 || item.value.length > 16) {
+                if (item.value.length < 7 || item.value.length > 11) {
                     btnsSubmit.forEach(item => {
                         item.setAttribute('disabled', true);
                     });
@@ -97,6 +100,9 @@ const submitForm = () => {
                 calcInput.value = '';
                 calcTotal.value = '';
             }
+            overlay.style.display = 'none';
+            headerModal.style.display = 'none';
+            servicesModal.style.display = 'none';
         });
     });
 

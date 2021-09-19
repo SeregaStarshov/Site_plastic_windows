@@ -1,8 +1,9 @@
 const path = require('path');
+require("babel-polyfill");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-	entry: './js/index.js',
+	entry: ['babel-polyfill', './js/index.js'],
 	output: {
 		filename: 'dev-bundle.js',
 		path: path.resolve(__dirname, './dist'),

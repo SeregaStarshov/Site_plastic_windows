@@ -1,8 +1,9 @@
+const servicesModal = document.querySelector('.services-modal');
+export {servicesModal};
 import { overlay } from "./modalCall";
 
 const callOurServices = () => {
     const serviceBtns = document.querySelectorAll('.service-button>.btn-success');
-    const servicesModal = document.querySelector('.services-modal');
     const servicesModalClose = document.querySelector('.services-modal__close');
 
     serviceBtns.forEach(item => {

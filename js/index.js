@@ -7,6 +7,7 @@ import scroll from "./modules/scroll";
 import submitForm from "./modules/form";
 import calc from "./modules/calc";
 import sliderOurServices from "./modules/sliderOurServices";
+import showComments from "./modules/comments";
 
 //========заказать звонок============
 requestCall();
@@ -34,3 +35,6 @@ calc();
 
 //=========sliderOurServices========
 sliderOurServices();
+
+//=========showComments============
+showComments();
